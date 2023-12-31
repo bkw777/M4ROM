@@ -90,7 +90,17 @@ $
 If you see anything else, inspect the pin connections and solder work. Try pushing the pcb futher down onto the programming adapter to make the pins bind up a little tighter. The holes in the 4ROM are intentionally a little bit closer together than the exact 2.0mm of the pins on the programming adapter, so the pins bind up tighter the further down you push the 4ROM. It should be essentially impossible to push it all the way down, and don't try, but the further you go the stronger the pin contacts. Test the solder work by touching a sharp needle tip probe to the tops of the chip legs right where they enter the plastic body, and the other probe to one of the programmer adapter holes.
 
 ### Erase the whole chip
-Normally the programmer would automatically erase the whole chip before each write, but in this case we will need to block that when writing the individual 32K chunks later, because we want to be able to write one 32K bank without erasing the other 3 banks. But we do still want to erase the whole chip one time before the individual bank writes. So do it first as a seperate operation.
+Normally the entire chip would always be erased before each write,  
+but this must be supressed in this case when writing the individual banks,  
+because we don't want to erase the other 3 banks every time we write one bank.
+
+But the chip must still be erased once before writing the individual banks.
+
+So, erase the chip as a separate step before writing any of the individual banks.
+
+This must also be done before re-writing any bank that isn't currently blank.  
+If a bank currently has data, and you want to over-write it, you must erase the whole chip and re-write all 4 banks.
+
 ```
 $ minipro -p 'SST39SF010A' -u -E
 Found TL866II+ 04.2.132 (0x284)
@@ -129,6 +139,8 @@ Reading Code...  0.25Sec  OK
 Verification OK
 $
 ```
+
+
 
 # References
 [Molex78802_Module](https://github.com/bkw777/Molex78802_Module)  
