@@ -39,16 +39,17 @@ The same programming adapter is used for both.
 
 
 ### TANDY PCB  
-PCB https://www.pcbway.com/project/shareproject/4ROM_100_multi_option_rom_module_for_TRS_80_Model_100_102_200_93cfa6c8.html  
+[PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_100_multi_option_rom_module_for_TRS_80_Model_100_102_200_93cfa6c8.html)
 
 ### 27256 PCB  
-PCB https://www.pcbway.com/project/shareproject/4ROM_78802_714ecf32.html  
+[PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_78802_714ecf32.html)
 
 ### BOM  
-BOM https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=66e12c3f20 or https://www.digikey.com/short/whn7w258  
+<!-- [Mouser](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=66e12c3f20)  -->
+[DigiKey](https://www.digikey.com/short/rzj0j0wr)
 
 ### Carrier  
-Carrier http://shpws.me/SGGB  
+[Shapeways](http://shpws.me/SGGB)
 
 ### Programming Adapter  
 PCB https://www.pcbway.com/project/shareproject/4ROM_Programming_Adapter_fc156337.html  
