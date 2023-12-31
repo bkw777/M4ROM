@@ -15,14 +15,12 @@ The advantages over the original Teeprom are:
 The disadvantages are:  
 * The board has more parts and is more difficult to solder.
 
-There are 2 versions so far,  
-'''M4ROM_TANDY''' is only for TANDY 100, 102, & 200, same as Teeprom.
-
-'''M4ROM_27256''' is for everything else, Same as Meeprom.  
-Examples: TANDY 600, Epson PX-4 & PX-8, general industrial applications, most anywhere the Molex 78805 socket is found.
+There are two almost identical versions supporting two commonly needed pinouts:  
+'''M4ROM_TANDY''' is only for TANDY 100, 102, & 200, same as Teeprom.  
+'''M4ROM_27256''' is for everything else, Same as Meeprom. (TANDY 600, Epson PX-4 & PX-8, Kyotronic KC-85)
 
 All parts other than the PCB are the same for both versions.  
-The difference is only in the pinout of the edge connectors. TANDY 100, 102, & 200 have a non-standard pinout. The 27256 version provides a standard 27256 pinout.  
+The difference is only in the pinout of the edge connectors. TANDY 100, 102, & 200 have a non-standard pinout. The 27256 version provides a standard 27C256 or 32Kx8 parallel mask rom pinout.
 
 The same programming adapter is used for both.
 
@@ -37,28 +35,24 @@ The same programming adapter is used for both.
 
 ![M4ROM Programming Adapter](PCB/out/M4ROM_programming_adapter.jpg)
 
+### Parts
 
-### TANDY PCB  
-[PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_100_multi_option_rom_module_for_TRS_80_Model_100_102_200_93cfa6c8.html)
+[TANDY-compatible PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_100_multi_option_rom_module_for_TRS_80_Model_100_102_200_93cfa6c8.html)
 
-### 27256 PCB  
-[PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_78802_714ecf32.html)
+[27256-compatible PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_78802_714ecf32.html)
 
-### BOM  
-<!-- [Mouser](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=66e12c3f20)  -->
-[DigiKey](https://www.digikey.com/short/rzj0j0wr)
+[BOM @ DigiKey](https://www.digikey.com/short/rzj0j0wr)
 
-### Carrier  
-[Shapeways](http://shpws.me/SGGB)
+[Carrier @ Shapeways](http://shpws.me/SGGB)
 
-### Programming Adapter  
-PCB https://www.pcbway.com/project/shareproject/4ROM_Programming_Adapter_fc156337.html  
-BOM https://www.digikey.com/short/f3jhw9v1  
-<!-- https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=a770931c82 -->
-
-When ordering the PCB (not the programming adapter PCB):  
+When ordering the PCB (only for the M4ROM, not the programming adapter):  
 Select ENIG copper finish so the castellated edge contacts and programming adapter contacts are gold plated.  
 Change the min tacks/spaces option to 6/6mils. The PCBWAY web site automatically selects 5/5 for this board for some reason, but there are no such thin traces or spaces.
+
+### Programming Adapter  
+[Programming Adapter PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_Programming_Adapter_fc156337.html)  
+[Programming Adapter BOM @ DigiKey](https://www.digikey.com/short/f3jhw9v1)
+
 
 # Programming the chip  
 * Put the programming adapter into a programmer.  
