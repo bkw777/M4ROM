@@ -17,7 +17,7 @@ The disadvantages are:
 
 There are two almost identical versions supporting two commonly needed pinouts:  
 '''M4ROM_TANDY''' is only for TANDY 100, 102, & 200, same as Teeprom.  
-'''M4ROM_27256''' is for everything else, Same as Meeprom. (TANDY 600, Epson PX-4 & PX-8, Kyotronic KC-85)
+'''M4ROM_27256''' is for everything else, same as Meeprom. (TANDY 600, Epson PX-4 & PX-8, Kyotronic KC-85)
 
 All parts other than the PCB are the same for both versions.  
 The difference is only in the pinout of the edge connectors. TANDY 100, 102, & 200 have a non-standard pinout. The 27256 version provides a standard 27C256 or 32Kx8 parallel mask rom pinout.
