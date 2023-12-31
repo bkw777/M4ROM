@@ -53,7 +53,8 @@ The same programming adapter is used for both.
 
 ### Programming Adapter  
 PCB https://www.pcbway.com/project/shareproject/4ROM_Programming_Adapter_fc156337.html  
-BOM https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=a770931c82 or https://www.digikey.com/short/f3jhw9v1
+BOM https://www.digikey.com/short/f3jhw9v1  
+<!-- https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=a770931c82 -->
 
 When ordering the PCB (not the programming adapter PCB):  
 Select ENIG copper finish so the castellated edge contacts and programming adapter contacts are gold plated.  
