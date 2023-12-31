@@ -60,87 +60,84 @@ When ordering the PCB (not the programming adapter PCB):
 Select ENIG copper finish so the castellated edge contacts and programming adapter contacts are gold plated.  
 Change the min tacks/spaces option to 6/6mils. The PCBWAY web site automatically selects 5/5 for this board for some reason, but there are no such thin traces or spaces.
 
-# Programming the chip:  
+# Programming the chip  
 * Put the programming adapter into a programmer.  
 * Remove the M4ROM PCB from the carrier and connect it to the programming adapter by the center pins. You don't need to push the pcb all the way down. Just get the pins into the holes at all and that is good. It should be stiff.  
-* Select the desired bank number with the slide switch on the M4ROM.  
+* Select the desired bank number with the slide switch on the M4ROM.
 * Configure the programmer:  
   * device "SST39SF010A"  
   * ignore size mismatch  
-  * do not automatically erase the whole chip before writing  
 * Write a single 32K rom image.
+* After writing the first bank, for the remaining banks, also add:
+  * do not automatically erase the whole chip before writing
 
+The chip may be re-written as many times as you want, but once data has been written to a given bank, that bank can not be written again without erasing the whole chip again first.  
+
+## Example
 The following is using a TL-866II+ programmer and the open source [minipro](https://gitlab.com/DavidGriffith/minipro) software.  
-(If buying a new programmer, be aware minipro does not support the new T48 or T56 programmers, only TL-866II+ and older.)
 
 ### Test the pin connections  
-Just to verify that the board is soldered correctly and all of the programming adapter pins are making a good connection.  
-It should say pins 2 and 3 are bad, and nothing else.  
+It should say bad contact on pins 2 and 3, and nothing else.  
 ```
-$ minipro -p 'SST39SF010A' -z
+$ minipro --device 'SST39SF010A' --pin_check
 Found TL866II+ 04.2.132 (0x284)
 Bad contact on pin:2
 Bad contact on pin:3
 $
 ```
 
-"Bad contact" on pins 2 & 3 is expected. Those are the 2 highest address bits A15 and A16, which aren't connected to the outside world. They are only connected to the bank-select logic on the board.
+If you see anything else, inspect the pin connections and solder work.
 
-(If you see pins 1 & 2 instead of 2 & 3, then update [minipro](https://gitlab.com/DavidGriffith/minipro) to get this [fix](https://gitlab.com/DavidGriffith/minipro/-/merge_requests/220).  
+You may try pushing the pcb further down onto the programming adapter to make the pins bind up a little tighter and contact better, but DON'T try to push the board all the way down.
 
-If you see anything else, inspect the pin connections and solder work. Try pushing the pcb futher down onto the programming adapter to make the pins bind up a little tighter. The holes in the 4ROM are intentionally a little bit closer together than the exact 2.0mm of the pins on the programming adapter, so the pins bind up tighter the further down you push the 4ROM. It should be essentially impossible to push it all the way down, and don't try, but the further you go the stronger the pin contacts. Test the solder work by touching a sharp needle tip probe to the tops of the chip legs right where they enter the plastic body, and the other probe to one of the programmer adapter holes.
+The holes in the M4ROM are spaced closer together than the 2.0mm of the pins on the programming adapter, so the pins bind up tighter the further down you push the M4ROM.
+
+It should be essentially impossible to push it all the way down, and so **don't try**, but the further you go the stronger the pins contact.
 
 ### Erase the whole chip
-Normally the entire chip would always be erased before each write,  
-but this must be supressed in this case when writing the individual banks,  
-because we don't want to erase the other 3 banks every time we write one bank.
+The chip must be erased once before writing any banks, and then the normal erase-before-write must be suppressed when writing the individual banks.
 
-But the chip must still be erased once before writing the individual banks.
-
-So, erase the chip as a separate step before writing any of the individual banks.
-
-This must also be done before re-writing any bank that isn't currently blank.  
-If a bank currently has data, and you want to over-write it, you must erase the whole chip and re-write all 4 banks.
+The whole chip must also be erased in order to over-write any bank that isn't currently blank.  
+Data can not be over-written without first erasing, and there is no way to erase just one bank without erasing the whole chip, so in order to over-write a bank that isn't already blank, the whole chip must be erased again and all banks must be re-written.
 
 ```
-$ minipro -p 'SST39SF010A' -u -E
+$ minipro --device 'SST39SF010A' --unprotect --erase
 Found TL866II+ 04.2.132 (0x284)
 Chip ID: 0xBFB5  OK
 Erasing... 0.40Sec OK
 $
 ```
 
+Alternatively, you may skip this step and just omit `-e` or `--skip_erase` while writing the first bank, and then add it for all remaining banks.
+
 ### Write one bank  
-Select position "1" on the slide switch, and write one 32K rom image.  
-The command line flags used below mean:  
-**-e** do not erase the chip before writing  
-**-u** un-protect the chip before writing  
-**-P** protect the chip after writing  
-**-s** non-fatal warning for the size mis-match from writing only 32K when 128K is expected  
+Select position `1` on the slide switch, and write one 32K rom image.  
 ```
-$ minipro -p 'SST39SF010A' -u -P -s -e -w MULTIPLAN.rom
+$ minipro --device 'SST39SF010A' --unprotect --protect --no_size_error --skip_erase --write TSD101.BX
 Found TL866II+ 04.2.132 (0x284)
+Device code: 19339229
+Serial code: XYG0VZ54DQ4VCC53WFWZ
 Chip ID: 0xBFB5  OK
 Warning: Incorrect file size: 32768 (needed 131072)
-Writing Code...  1.65Sec  OK
+Writing Code...  1.75Sec  OK
 Reading Code...  0.25Sec  OK
 Verification OK
-$
 ```
 
 ### Write another bank  
-Select position "2" on the slide switch, and repeat to write another rom.  
+Select position `2` on the slide switch, and repeat to write another rom.  
+(this shows the short versions of all the same commandline flags as above)  
 ```
-$ minipro -p 'SST39SF010A' -u -P -s -e -w BASIC.rom
+$ minipro -uPes -p 'SST39SF010A' -w UR2100.BX
 Found TL866II+ 04.2.132 (0x284)
+Device code: 19339229
+Serial code: XYG0VZ54DQ4VCC53WFWZ
 Chip ID: 0xBFB5  OK
 Warning: Incorrect file size: 32768 (needed 131072)
-Writing Code...  1.64Sec  OK
+Writing Code...  1.75Sec  OK
 Reading Code...  0.25Sec  OK
 Verification OK
-$
 ```
-
 
 
 # References
