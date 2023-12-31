@@ -84,7 +84,7 @@ If you see anything else, inspect the pin connections and solder work.
 
 You may try pushing the pcb further down onto the programming adapter to make the pins bind up a little tighter and contact better, but DON'T try to push the board all the way down.
 
-The holes in the M4ROM are spaced closer together than the 2.0mm of the pins on the programming adapter, so the pins bind up tighter the further down you push the M4ROM.
+The holes in the M4ROM are spaced closer together than the pins on the programming adapter, so the pins bind up tighter the further down you push the M4ROM.
 
 It should be essentially impossible to push it all the way down, and so **don't try**, but the further you go the stronger the pins contact.
 
