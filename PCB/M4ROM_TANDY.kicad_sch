@@ -6,8 +6,8 @@
 
   (title_block
     (title "M4ROM TANDY")
-    (date "2023-12-30")
-    (rev "006")
+    (date "2023-12-31")
+    (rev "008")
     (company "Brian K. White b.kenyon.w@gmail.com")
     (comment 1 "CC-BY-SA")
     (comment 2 "Flash based 4-bank option ROM for TANDY 100/102/200")
@@ -548,6 +548,129 @@
         )
       )
     )
+    (symbol "000_LOCAL:SW_1P4T_CUS-14B_-_PTH" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "SW" (at 0 6.35 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "SW_1P4T_CUS-14B_-_PTH" (at 0 8.89 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "000_LOCAL:SW_SP4T_CUS-14B" (at -15.875 4.445 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "switch sp4t ON-ON-ON-ON" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Switch, 4 position, single pole 4 throw, 4 position switch, SP4T" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "SW* SP4T*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "SW_1P4T_CUS-14B_-_PTH_0_1"
+        (circle (center -2.032 -3.81) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center -2.032 -1.27) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center -2.032 1.27) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center -2.032 3.81) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -2.032 -1.778)
+            (xy -2.032 -3.302)
+          )
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy -2.032 -0.762)
+          )
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -2.032 3.302)
+            (xy -2.032 1.778)
+          )
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.524 3.81)
+            (xy 1.524 3.81)
+          )
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.032 -3.81) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.032 -1.27) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.032 1.27) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.032 3.81) (radius 0.4572)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "SW_1P4T_CUS-14B_-_PTH_1_1"
+        (pin passive line (at 5.08 3.81 180) (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 1.27 180) (length 2.54)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 3.81 0) (length 2.54)
+          (name "C" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 3.81 0) (length 2.54) hide
+          (name "C" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 -1.27 180) (length 2.54)
+          (name "5" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 -3.81 180) (length 2.54)
+          (name "6" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -1.27 -6.35 90) (length 1.27)
+          (name "M" (effects (font (size 1.27 1.27))))
+          (number "M" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 1.27 -6.35 90) (length 1.27)
+          (name "S" (effects (font (size 1.27 1.27))))
+          (number "S" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "000_LOCAL:Tandy_100_102_200_option_rom" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -7.62 26.67 0)
         (effects (font (size 1.27 1.27)))
@@ -723,125 +846,6 @@
         )
       )
     )
-    (symbol "0_LOCAL:SW_1P4T_CUS-14B" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "SW" (at 0 6.35 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "SW_1P4T_CUS-14B" (at 0 -7.62 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "0_LOCAL:SW_SP4T_CUS-14B" (at -15.875 4.445 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "switch sp4t ON-ON-ON-ON" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Switch, 4 position, single pole 4 throw, 4 position switch, SP4T" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "SW* SP4T*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "SW_1P4T_CUS-14B_0_1"
-        (circle (center -2.032 -3.81) (radius 0.4572)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (circle (center -2.032 -1.27) (radius 0.4572)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (circle (center -2.032 1.27) (radius 0.4572)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (circle (center -2.032 3.81) (radius 0.4572)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -2.032 -1.778)
-            (xy -2.032 -3.302)
-          )
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -2.032 0.762)
-            (xy -2.032 -0.762)
-          )
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -2.032 3.302)
-            (xy -2.032 1.778)
-          )
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -1.524 3.81)
-            (xy 1.524 3.81)
-          )
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-        (circle (center 2.032 -3.81) (radius 0.4572)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (circle (center 2.032 -1.27) (radius 0.4572)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (circle (center 2.032 1.27) (radius 0.4572)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (circle (center 2.032 3.81) (radius 0.4572)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "SW_1P4T_CUS-14B_1_1"
-        (pin passive line (at 5.08 3.81 180) (length 2.54)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 5.08 1.27 180) (length 2.54)
-          (name "2" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -5.08 3.81 0) (length 2.54)
-          (name "C" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -5.08 3.81 0) (length 2.54) hide
-          (name "C" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 5.08 -1.27 180) (length 2.54)
-          (name "5" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 5.08 -3.81 180) (length 2.54)
-          (name "6" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -6.35 90) (length 1.27)
-          (name "S" (effects (font (size 1.27 1.27))))
-          (number "S" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "power:VCC" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -914,6 +918,9 @@
   (junction (at 85.09 156.21) (diameter 0) (color 0 0 0 0)
     (uuid c1348a90-eb28-4a14-9924-aa1fb4876dc4)
   )
+  (junction (at 62.23 170.18) (diameter 0) (color 0 0 0 0)
+    (uuid dfb12d0f-fab4-47f3-9de1-ad563759cf18)
+  )
 
   (no_connect (at 66.04 160.02) (uuid 0a58a2b2-0bba-4383-ad22-4f704d078187))
   (no_connect (at 78.74 106.68) (uuid 8a2e9832-ec8b-402b-a823-7575cc069328))
@@ -978,6 +985,10 @@
   (wire (pts (xy 66.04 162.56) (xy 77.47 162.56))
     (stroke (width 0) (type default))
     (uuid aed9c3fa-aa18-49c4-8b32-1844ae4a4d63)
+  )
+  (wire (pts (xy 59.69 170.18) (xy 62.23 170.18))
+    (stroke (width 0) (type default))
+    (uuid b10c3682-49a6-4b24-918f-d9eba882e574)
   )
   (wire (pts (xy 190.5 109.22) (xy 190.5 76.2))
     (stroke (width 0) (type default))
@@ -1450,7 +1461,7 @@
     (pin "9" (uuid f54605f0-9f9f-44ef-b186-31ffd3d32587))
     (pin "6" (uuid bdaeb304-03f6-4ed1-8188-4a2632eb2a39))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "U1") (unit 1)
         )
@@ -1502,7 +1513,7 @@
     (pin "8" (uuid 0baec988-9064-4044-8e68-df0648a3ed6d))
     (pin "9" (uuid a0f6baa5-9472-4b91-9ab5-82aafab9ebe1))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "J1") (unit 1)
         )
@@ -1527,7 +1538,7 @@
     )
     (pin "1" (uuid a0b54ff0-2987-4237-8cfd-236c8a3f948b))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR0101") (unit 1)
         )
@@ -1552,7 +1563,7 @@
     )
     (pin "1" (uuid 36013675-cc46-4023-a9fd-ac46f5b900be))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR0102") (unit 1)
         )
@@ -1577,7 +1588,7 @@
     )
     (pin "1" (uuid ec6a5773-1ac0-46f9-b63c-7df6831c21de))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR0105") (unit 1)
         )
@@ -1607,7 +1618,7 @@
           (reference "#PWR021") (unit 1)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR06") (unit 1)
         )
@@ -1632,7 +1643,7 @@
     )
     (pin "1" (uuid d2608697-357f-4418-88d8-cfbb2d354626))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR01") (unit 1)
         )
@@ -1662,7 +1673,7 @@
           (reference "#PWR021") (unit 1)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR09") (unit 1)
         )
@@ -1687,7 +1698,7 @@
     )
     (pin "1" (uuid 8ceca350-cf90-45e7-866e-0771d152f8ad))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR0116") (unit 1)
         )
@@ -1717,7 +1728,7 @@
           (reference "#PWR022") (unit 1)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR04") (unit 1)
         )
@@ -1749,7 +1760,7 @@
     (pin "4" (uuid f47f7e3b-ff2f-4a4f-91e6-2d917616e315))
     (pin "5" (uuid f01a02e0-761b-471d-a9f4-21be7fcb53e2))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "RA1") (unit 4)
         )
@@ -1779,7 +1790,7 @@
           (reference "#PWR021") (unit 1)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR07") (unit 1)
         )
@@ -1814,7 +1825,7 @@
           (reference "D1") (unit 2)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "D1") (unit 2)
         )
@@ -1822,7 +1833,7 @@
     )
   )
 
-  (symbol (lib_id "0_LOCAL:SW_1P4T_CUS-14B") (at 60.96 163.83 0) (unit 1)
+  (symbol (lib_id "000_LOCAL:SW_1P4T_CUS-14B_-_PTH") (at 60.96 163.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7218067d-702e-408a-ad99-64fb4adff47d)
     (property "Reference" "SW1" (at 62.23 157.48 0)
@@ -1831,7 +1842,7 @@
     (property "Value" "CUS-14TB" (at 64.77 154.94 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "000_LOCAL:SW_SP4T_CUS-14B" (at 45.085 159.385 0)
+    (property "Footprint" "000_LOCAL:SW_SP4T_CUS-14B - PTH" (at 45.085 159.385 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 60.96 163.83 0)
@@ -1844,13 +1855,14 @@
     (pin "5" (uuid 87300a8d-2fe5-4bfd-8d69-c437fca899f6))
     (pin "6" (uuid fbb03f5b-1a14-458b-bd3d-c1c1fe08cbef))
     (pin "S" (uuid 34c3c4bf-8afc-4e64-a270-dd5e2f4ad1c3))
+    (pin "M" (uuid ac81ab0d-c8d1-4870-b6a0-ce73a04dcdef))
     (instances
       (project "WP-2_IC-Card_MRAM_512"
         (path "/61a4a6ea-f14c-4701-87bd-6399392c074d"
           (reference "SW1") (unit 1)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "SW1") (unit 1)
         )
@@ -1876,7 +1888,7 @@
     (pin "1" (uuid 91cf7692-d267-4cbe-b957-97d60116c27c))
     (pin "2" (uuid 1361b180-cec5-4a47-9961-195eb6febc9f))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "C1") (unit 1)
         )
@@ -1908,7 +1920,7 @@
     (pin "4" (uuid f47f7e3b-ff2f-4a4f-91e6-2d917616e316))
     (pin "5" (uuid f01a02e0-761b-471d-a9f4-21be7fcb53e3))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "RA1") (unit 1)
         )
@@ -1938,7 +1950,7 @@
           (reference "#PWR021") (unit 1)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR03") (unit 1)
         )
@@ -1973,7 +1985,7 @@
           (reference "D1") (unit 1)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "D1") (unit 1)
         )
@@ -2005,7 +2017,7 @@
     (pin "4" (uuid f47f7e3b-ff2f-4a4f-91e6-2d917616e317))
     (pin "5" (uuid f01a02e0-761b-471d-a9f4-21be7fcb53e4))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "RA1") (unit 3)
         )
@@ -2030,7 +2042,7 @@
     )
     (pin "1" (uuid f1f046be-1913-4533-a397-d325b7a9527b))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR0110") (unit 1)
         )
@@ -2082,7 +2094,7 @@
     (pin "8" (uuid 478013bf-64a4-4ac0-9f38-93d882f07378))
     (pin "9" (uuid fdf9d292-edf4-4e14-a1bc-88342c13cb20))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "J2") (unit 1)
         )
@@ -2114,7 +2126,7 @@
     (pin "4" (uuid f47f7e3b-ff2f-4a4f-91e6-2d917616e318))
     (pin "5" (uuid f01a02e0-761b-471d-a9f4-21be7fcb53e5))
     (instances
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "RA1") (unit 2)
         )
@@ -2144,7 +2156,7 @@
           (reference "#PWR021") (unit 1)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR05") (unit 1)
         )
@@ -2152,19 +2164,19 @@
     )
   )
 
-  (symbol (lib_id "0_LOCAL:GND") (at 60.96 170.18 0) (mirror y) (unit 1)
+  (symbol (lib_id "0_LOCAL:GND") (at 62.23 170.18 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f628cf6c-c54d-4136-b4f9-d618bb3aef69)
-    (property "Reference" "#PWR020" (at 60.96 173.99 0)
+    (property "Reference" "#PWR020" (at 62.23 173.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 60.96 173.99 0)
+    (property "Value" "GND" (at 62.23 173.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (at 60.96 170.18 0)
+    (property "Footprint" "" (at 62.23 170.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 60.96 170.18 0)
+    (property "Datasheet" "" (at 62.23 170.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c0705098-5377-4694-a5a4-e97403cd3f53))
@@ -2174,7 +2186,7 @@
           (reference "#PWR020") (unit 1)
         )
       )
-      (project "4ROM_100"
+      (project "M4ROM_TANDY"
         (path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
           (reference "#PWR02") (unit 1)
         )
