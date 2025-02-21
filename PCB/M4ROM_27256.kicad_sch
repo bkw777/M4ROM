@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "M4ROM 27256")
-		(date "2023-12-31")
-		(rev "004")
+		(date "2025-02-21")
+		(rev "005")
 		(company "Brian K. White b.kenyon.w@gmail.com")
 		(comment 1 "CC-BY-SA")
 		(comment 2 "4-bank ROM for 78805 socket with standard mask rom JEDEC pinout")
@@ -3841,16 +3841,16 @@
 		)
 		(uuid "163e29c2-47d6-49e1-82b0-4333a1b2954c")
 	)
-	(text "U1: Any 29F010, 29F020, or 29F040 compatible may be installed,\nbut only 128k is used, so ideal is 29F010. ex: SST39SF010A\n\nRA1: YC164-JR-07200KL\n\nD1: Any 2-pair common-cathode 6TSSOP. ex: BAV70S, BAT54CDW\n"
+	(text "Footprint compatible with 128Kx8 to 512Kx8,\nthough only 128K is used. 5V. 8x14mm TSOP-I-32\nExamples:\nSST39SF0x0x-xx-xx-WHx ex: SST39SF010A-70-4C-WHE SST39SF020A SST39SF040\nGLS29EE0x0-xx-xx-WHx ex: GLS29EE010-70-4C-WHE\nFeb 2025: no known active compatible parts\n"
 		(exclude_from_sim no)
-		(at 180.34 161.29 0)
+		(at 119.888 49.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "309034cf-a3dc-45d6-87ff-32acbf66ea46")
+		(uuid "4224317d-654d-4246-98d3-577baebfab93")
 	)
 	(text "just for pcb routing"
 		(exclude_from_sim no)
@@ -3873,17 +3873,6 @@
 			(justify left bottom)
 		)
 		(uuid "b0e20aff-6f7d-4984-90a0-843a64b33197")
-	)
-	(text "SST39SF010A"
-		(exclude_from_sim no)
-		(at 146.05 57.15 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d2061d44-61a7-46ec-bb7a-c86f874028de")
 	)
 	(text "BANK SELECT"
 		(exclude_from_sim no)
@@ -4897,7 +4886,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "IC FLASH 128K-512Kx8 5V PARALLEL 32TSOP 8x14mm"
+			(at 152.4 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "SST39SF010A-70-4C-WHE"
 			(at 152.4 88.9 0)
 			(effects
 				(font
@@ -5016,7 +5014,7 @@
 		(at 88.9 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005e6792df")
@@ -5390,7 +5388,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
+		(property "Datasheet" "datasheets/YC164.pdf"
 			(at 190.5 72.39 90)
 			(effects
 				(font
@@ -5399,7 +5397,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RES ARRAY 4 x 200K isolated 1206 4x0612 convex"
+			(at 190.5 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "YC164-JR-07200KL"
 			(at 190.5 72.39 0)
 			(effects
 				(font
@@ -5475,7 +5482,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "datasheets/cus.pdf"
 			(at 60.96 160.02 0)
 			(effects
 				(font
@@ -5484,7 +5491,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "CUS-14TB Switch, 4 position, single pole 4 throw, 4 position switch, SP4T"
+			(at 60.96 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CUS-14TB"
 			(at 60.96 160.02 0)
 			(effects
 				(font
@@ -5577,7 +5593,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "BAV70S 100V 250mA high-speed switching diodes, dual common cathode, SOT-363"
+			(at 85.09 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BAV70S,115"
 			(at 85.09 158.75 0)
 			(effects
 				(font
@@ -5735,7 +5760,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "BAV70S 100V 250mA high-speed switching diodes, dual common cathode, SOT-363"
+			(at 101.6 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BAV70S,115"
 			(at 101.6 161.29 0)
 			(effects
 				(font
@@ -5989,7 +6023,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9f86cdad-0ab7-4903-aa0b-a7790422c5da")
+		(uuid "8d2dba67-c596-49dd-a9cf-36028c29efe9")
 		(property "Reference" "C1"
 			(at 129.54 62.2362 0)
 			(effects
@@ -6017,7 +6051,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "datasheets/CL21B105KBFNNNE.pdf"
 			(at 127 63.5 0)
 			(effects
 				(font
@@ -6026,7 +6060,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "CAP CER 1UF 16V+ 0805"
+			(at 127 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL21B105KBFNNNE"
 			(at 127 63.5 0)
 			(effects
 				(font
@@ -6036,10 +6079,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "f537233a-bc30-486a-809f-1f9670c9aea8")
+			(uuid "069ea612-22ff-4534-b695-7edf5b95b648")
 		)
 		(pin "2"
-			(uuid "de647a8d-0c24-484a-b652-25cb2a369f24")
+			(uuid "b0cb6c60-96b4-41cb-8661-5bad95e44b4a")
 		)
 		(instances
 			(project "M4ROM_27256"
@@ -6087,7 +6130,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
+		(property "Datasheet" "datasheets/YC164.pdf"
 			(at 83.82 185.42 90)
 			(effects
 				(font
@@ -6096,7 +6139,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RES ARRAY 4 x 200K isolated 1206 4x0612 convex"
+			(at 83.82 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "YC164-JR-07200KL"
 			(at 83.82 185.42 0)
 			(effects
 				(font
@@ -6419,7 +6471,7 @@
 		(at 215.9 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "cf11fea7-428a-4ca1-a87a-05e04246595e")
@@ -6742,7 +6794,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
+		(property "Datasheet" "datasheets/YC164.pdf"
 			(at 81.28 152.4 90)
 			(effects
 				(font
@@ -6751,7 +6803,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RES ARRAY 4 x 200K isolated 1206 4x0612 convex"
+			(at 81.28 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "YC164-JR-07200KL"
 			(at 81.28 152.4 0)
 			(effects
 				(font
@@ -6830,7 +6891,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
+		(property "Datasheet" "datasheets/YC164.pdf"
 			(at 97.79 154.94 90)
 			(effects
 				(font
@@ -6839,7 +6900,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RES ARRAY 4 x 200K isolated 1206 4x0612 convex"
+			(at 97.79 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "YC164-JR-07200KL"
 			(at 97.79 154.94 0)
 			(effects
 				(font

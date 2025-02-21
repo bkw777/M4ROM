@@ -1,3 +1,7 @@
+As of Feb 2025 there are no known compatible flash chips that are still active.  
+The most recently available part was SST39SF0x0A-xx-xx-WHE or GLS29EE0x0A-xx-xx-WHE  
+ex: SST39SF010A-70-4C-WHE  
+The problem is the 8x14mm TSOP package size.  
 
 # M4ROM
 
