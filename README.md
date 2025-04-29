@@ -1,8 +1,3 @@
-As of Feb 2025 there are no known compatible flash chips that are still active.  
-The most recently available part was SST39SF0x0A-xx-xx-WHE or GLS29EE0x0A-xx-xx-WHE  
-ex: SST39SF010A-70-4C-WHE  
-The problem is the 8x14mm TSOP package size.  
-
 # M4ROM
 
 Virtual 27C256 rom x 4 to fit Molex 78805 socket
@@ -40,6 +35,13 @@ The same programming adapter is used for both.
 ![M4ROM Programming Adapter](PCB/out/M4ROM_programming_adapter.jpg)
 
 ### Parts
+  
+  As of March 2025 Microchip has changed the flash chip part number from SST39SF010A-xx-xx-WHE to SST39SF010A-xx-xx-TU.  
+  The old parts are no longer available, and the new parts are not yet available in individual quantities, but are "available to order".  
+  The BOM below is not updated yet and still has the WHE part number.  
+  But even with the new part number you may not be able to buy one.  
+  You will have to get it from ebay or other sources of old stock.  
+  Also search for the Greenliant version GLS29EE010-xx-xx-WHE, or any 5V 29F010 with a 14mm sTSOP-32 package.
 
 [TANDY-compatible PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_100_multi_option_rom_module_for_TRS_80_Model_100_102_200_93cfa6c8.html)
 

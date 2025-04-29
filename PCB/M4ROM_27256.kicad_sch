@@ -3841,9 +3841,9 @@
 		)
 		(uuid "163e29c2-47d6-49e1-82b0-4333a1b2954c")
 	)
-	(text "Footprint compatible with 128Kx8 to 512Kx8,\nthough only 128K is used. 5V. 8x14mm TSOP-I-32\nExamples:\nSST39SF0x0x-xx-xx-WHx ex: SST39SF010A-70-4C-WHE SST39SF020A SST39SF040\nGLS29EE0x0-xx-xx-WHx ex: GLS29EE010-70-4C-WHE\nFeb 2025: no known active compatible parts\n"
+	(text "Compatible with 128Kx8 to 512Kx8 parts,\nthough only 128K is used. 5V. 8x14mm sTSOP-I-32\nSST39SF010A-55-4C-TU\nSST39SF010A-55-4I-TU\nSST39SF010A-70-4C-TU\nSST39SF010A-70-4I-TU\nSST39SF020A-xx-xx-TU\nSST39SF040-xx-xx-TU\nold parts:\nSST39SF0x0x-xx-xx-WHE\nGLS29EE0x0-xx-xx-WHE"
 		(exclude_from_sim no)
-		(at 119.888 49.53 0)
+		(at 129.54 50.546 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4895,7 +4895,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "SST39SF010A-70-4C-WHE"
+		(property "MPN" "SST39SF010A-70-4C-TU"
 			(at 152.4 88.9 0)
 			(effects
 				(font

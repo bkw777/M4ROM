@@ -3,4 +3,4 @@
 "D1","BAV70S","datasheets/BAV70S.pdf","000_LOCAL:TSSOP-6-symmetric","1","","BAV70S,115","BAV70S 100V 250mA high-speed switching diodes, dual common cathode, SOT-363"
 "RA1","200k","datasheets/YC164.pdf","000_LOCAL:R_Array_Convex_4x0612","1","","YC164-JR-07200KL","RES ARRAY 4 x 200K isolated 1206 4x0612 convex"
 "SW1","CUS-14TB","datasheets/cus.pdf","000_LOCAL:SW_SP4T_CUS-14B - PTH","1","","CUS-14TB","CUS-14TB Switch, 4 position, single pole 4 throw, 4 position switch, SP4T"
-"U1","29F010","datasheets/29F040.pdf","000_LOCAL:TSOP32-14mm","1","","SST39SF010A-70-4C-WHE","NOR Flash Parallel 5V 128K-512Kx8 TSOP-32"
+"U1","29F010","datasheets/29F040.pdf","000_LOCAL:TSOP32-14mm","1","","SST39SF010A-70-4C-TU","NOR Flash Parallel 5V 128K-512Kx8 TSOP-32"
