@@ -47,7 +47,7 @@ The same programming adapter is used for both.
 
 [27256-compatible PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_78802_714ecf32.html)
 
-[BOM @ DigiKey](https://www.digikey.com/short/rzj0j0wr)
+[BOM @ DigiKey](https://www.digikey.com/short/7f784j27)
 
 [Carrier @ Shapeways](http://shpws.me/SGGB)
 
