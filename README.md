@@ -62,14 +62,12 @@ Change the min tacks/spaces option to 6/6mils. The PCBWAY web site automatically
 
 # Programming the chip  
 * Put the programming adapter into a programmer.  
-* Remove the M4ROM PCB from the carrier and connect it to the programming adapter by the center pins. You don't need to push the pcb all the way down. Just get the pins into the holes at all and that is good. It should be stiff.  
-* Select the desired bank number with the slide switch on the M4ROM.
-* Configure the programmer:  
-  * device "SST39SF010A"  
-  * ignore size mismatch  
+* Remove the M4ROM PCB from the carrier and connect it to the programming adapter by the center pins. You don't need to push the pcb all the way down. It should be stiff right away while the board is still near the top of the pins.  
+* Test pin connections.
+* Erase the whole chip.
+* Select the desired bank number with the slide switch on the M4ROM.  
 * Write a single 32K rom image.
-* After writing the first bank, for the remaining banks, also add:
-  * do not automatically erase the whole chip before writing
+* Repeat select bank and write for the remaining 3 banks.
 
 The chip may be re-written as many times as you want, but once data has been written to a given bank, that bank can not be written again without erasing the whole chip again first.  
 
@@ -94,11 +92,28 @@ The holes in the M4ROM are spaced closer together than the pins on the programmi
 
 It should be essentially impossible to push it all the way down, and so **don't try**, but the further you go the stronger the pins contact.
 
+
+### Read one bank
+The actual chip is a 128K part like SST39SF010A, but we can't read 128K we can only read 32K because not all of the address lines are connected from the chip to the programmer.  
+So we have to tell the programmer some other device that is similar but only 32K, like AM28F256.
+
+```
+$ minipro --device 'AM28F256' --skip_id --read bank1.bin
+Found TL866II+ 04.2.132 (0x284)
+Device code: 19339229
+Serial code: XYG0VZ54DQ4VCC53WFWZ
+USB speed: 12Mbps (USB 1.1)
+WARNING: skipping Chip ID test
+Reading Code...  0.30Sec  OK
+$ 
+```
+
 ### Erase the whole chip
 The chip must be erased once before writing any banks, and then the normal erase-before-write must be suppressed when writing the individual banks.
 
-The whole chip must also be erased in order to over-write any bank that isn't currently blank.  
-Data can not be over-written without first erasing, and there is no way to erase just one bank without erasing the whole chip, so in order to over-write a bank that isn't already blank, the whole chip must be erased again and all banks must be re-written.
+Once the whole chip is erased, each bank may be written once.
+
+It's not possible to erase a single bank, only the whole chip, so in order to re-write a bank that isn't currently blank, the whole chip must be erased again.
 
 ```
 $ minipro --device 'SST39SF010A' --unprotect --erase
@@ -108,10 +123,8 @@ Erasing... 0.40Sec OK
 $
 ```
 
-Alternatively, you may skip this step and just omit `-e` or `--skip_erase` while writing the first bank, and then add it for all remaining banks.
-
 ### Write one bank  
-Select position `1` on the slide switch, and write one 32K rom image.  
+
 ```
 $ minipro --device 'SST39SF010A' --unprotect --protect --no_size_error --skip_erase --write TSD101.BX
 Found TL866II+ 04.2.132 (0x284)
@@ -123,22 +136,6 @@ Writing Code...  1.75Sec  OK
 Reading Code...  0.25Sec  OK
 Verification OK
 ```
-
-### Write another bank  
-Select position `2` on the slide switch, and repeat to write another rom.  
-(this shows the short versions of all the same commandline flags as above)  
-```
-$ minipro -uPes -p 'SST39SF010A' -w UR2100.BX
-Found TL866II+ 04.2.132 (0x284)
-Device code: 19339229
-Serial code: XYG0VZ54DQ4VCC53WFWZ
-Chip ID: 0xBFB5  OK
-Warning: Incorrect file size: 32768 (needed 131072)
-Writing Code...  1.75Sec  OK
-Reading Code...  0.25Sec  OK
-Verification OK
-```
-
 
 # References
 [Molex78802_Module](https://github.com/bkw777/Molex78802_Module)  
