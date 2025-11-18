@@ -19,7 +19,7 @@ There are two almost identical versions supporting two commonly needed pinouts:
 '''M4ROM_27256''' is for everything else, same as Meeprom. (TANDY 600, Epson PX-4 & PX-8, Kyotronic KC-85)
 
 All parts other than the PCB are the same for both versions.  
-The difference is only in the pinout of the edge connectors. TANDY 100, 102, & 200 have a non-standard pinout. The 27256 version provides a standard 27C256 or 32Kx8 parallel mask rom pinout.
+The difference is only in the pinout of the castellated edge connectors. TANDY 100, 102, & 200 have a non-standard pinout. The 27256 version provides a standard 27C256 or 32Kx8 parallel mask rom pinout.
 
 The same programming adapter is used for both.
 
@@ -35,39 +35,38 @@ The same programming adapter is used for both.
 ![M4ROM Programming Adapter](PCB/out/M4ROM_programming_adapter.jpg)
 
 ### Parts
-  
-  As of March 2025 Microchip has changed the flash chip part number from SST39SF010A-xx-xx-WHE to SST39SF010A-xx-xx-TU.  
-  The old parts are no longer available, and the new parts are not yet available in individual quantities, but are "available to order".  
-  The BOM below is not updated yet and still has the WHE part number.  
-  But even with the new part number you may not be able to buy one.  
-  You will have to get it from ebay or other sources of old stock.  
-  Also search for the Greenliant version GLS29EE010-xx-xx-WHE, or any 5V 29F010 with a 14mm sTSOP-32 package.
+[TANDY PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_100_multi_option_rom_module_for_TRS_80_Model_100_102_200_93cfa6c8.html)
 
-[TANDY-compatible PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_100_multi_option_rom_module_for_TRS_80_Model_100_102_200_93cfa6c8.html)
+[27256 PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_78802_714ecf32.html)
 
-[27256-compatible PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_78802_714ecf32.html)
+[Carrier @ PCBWAY](https://www.pcbway.com/project/shareproject/Molex_7880x_28_PCB_Carrier_9419cd9c.html)
 
-[BOM @ DigiKey](https://www.digikey.com/short/7f784j27)
+[BOM @ DigiKey](https://www.digikey.com/short/z1j1wwrj)
 
-[Carrier @ Shapeways](http://shpws.me/SGGB)
+[Programming Adapter PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_Programming_Adapter_fc156337.html)
 
-When ordering the PCB (only for the M4ROM, not the programming adapter):  
-Select ENIG copper finish so the castellated edge contacts and programming adapter contacts are gold plated.  
-Change the min tacks/spaces option to 6/6mils. The PCBWAY web site automatically selects 5/5 for this board for some reason, but there are no such thin traces or spaces.
+[Programming Adapter BOM @ DigiKey](https://www.digikey.com/short/drp9qj7w)
 
-### Programming Adapter  
-[Programming Adapter PCB @ PCBWAY](https://www.pcbway.com/project/shareproject/4ROM_Programming_Adapter_fc156337.html)  
-[Programming Adapter BOM @ DigiKey](https://www.digikey.com/short/f3jhw9v1)
-
+When ordering the PCB:  
+* Min Tracks/Spaces: 6mil  
+  The order page sometimes auto-selects 5mil which is more expensive, but there are no such thin traces or spaces.  
+* Copper Finish: ENIG    (not the programming adapter)  
+  So the castellated edge contacts and programming adapter contacts are gold plated.
 
 # Programming the chip  
-* Put the programming adapter into a programmer.  
-* Remove the M4ROM PCB from the carrier and connect it to the programming adapter by the center pins. You don't need to push the pcb all the way down. It should be stiff right away while the board is still near the top of the pins.  
-* Test pin connections.
-* Erase the whole chip.
-* Select the desired bank number with the slide switch on the M4ROM.  
-* Write a single 32K rom image.
-* Repeat select bank and write for the remaining 3 banks.
+First a few notes,  
+Do a full chip erase once first, seperately from writing the banks.  
+Disable the usual default automatic erase-first when writing.  
+Each bank can only be written once per erase. To over-write a bank, you have to erase the whole chip and write all 4 banks again.  
+
+Procedure:  
+1 Put the programming adapter into a programmer.  
+2 Remove the M4ROM PCB from the carrier and connect it to the programming adapter by the center pins. DON'T try to push the PCB all the way down. It should be stiff right away while the board is still near the top of the pins.  
+3 [Test pin connections](#test-the-pin-connections). Pin-test function in the programmer, it should say bad contact on pins 2 & 3, and nothing else.  
+4 [Erase the whole chip](#erase-the-whole-chip).  
+5 Select the desired bank number with the slide switch on the M4ROM.  
+6 [Write a single 32K rom image](#write-one-bank). Disable erase-first.  
+7 Repeat 5 & 6 for the remaining banks.
 
 The chip may be re-written as many times as you want, but once data has been written to a given bank, that bank can not be written again without erasing the whole chip again first.  
 
@@ -84,18 +83,13 @@ Bad contact on pin:3
 $
 ```
 
-If you see anything else, inspect the pin connections and solder work.
+If you see anything else, try pushing the PCB down slightly harder. It still shouldn't go anywhere near all the way down, and don't try to force it, but the harder you push down the harder the pins wedge in the holes.
 
-You may try pushing the pcb further down onto the programming adapter to make the pins bind up a little tighter and contact better, but DON'T try to push the board all the way down.
-
-The holes in the M4ROM are spaced closer together than the pins on the programming adapter, so the pins bind up tighter the further down you push the M4ROM.
-
-It should be essentially impossible to push it all the way down, and so **don't try**, but the further you go the stronger the pins contact.
-
+The way the programming adapter connection works is the holes are almost the exact size of the pins, and the holes are spaced closer together than the pins, so the pins bind up tighter the further down you push the PCB. As the PCB slides down, the pins are pushed sideways and lean over, and make contact at both the bottom and top edges of the PCB.
 
 ### Read one bank
-The actual chip is a 128K part like SST39SF010A, but we can't read 128K we can only read 32K because not all of the address lines are connected from the chip to the programmer.  
-So we have to tell the programmer some other device that is similar but only 32K, like AM28F256.
+The actual chip is a 128K part like 39SF010, but we can't read 128K we can only read 32K because not all of the address lines are connected from the chip to the programmer.  
+The most convenient way to make the programmer read less than 128K is to tell the programmer to read a 32K chip that has the same kind of read cycle as the actual chip, like AM28F256.
 
 ```
 $ minipro --device 'AM28F256' --skip_id --read bank1.bin
@@ -124,6 +118,10 @@ $
 ```
 
 ### Write one bank  
+For writing unlike reading we have to tell the programmer the correct actual device instead of some 32K device, but unlike for reading we do have an option to write less than 128K.  
+Disable the automatic erase-before-write.  
+Enable the software write-protection after writing. This protects against corruption during power-down & power-up transitions.  
+The rom image file should be 32K bytes.
 
 ```
 $ minipro --device 'SST39SF010A' --unprotect --protect --no_size_error --skip_erase --write TSD101.BX

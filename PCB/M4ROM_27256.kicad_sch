@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "M4ROM 27256")
-		(date "2025-02-21")
-		(rev "005")
+		(date "2025-11-17")
+		(rev "006")
 		(company "Brian K. White b.kenyon.w@gmail.com")
 		(comment 1 "CC-BY-SA")
 		(comment 2 "4-bank ROM for 78805 socket with standard mask rom JEDEC pinout")
@@ -1840,275 +1840,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "000_LOCAL:BAV70S"
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0.635 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "BAV70S"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "000_LOCAL:TSSOP-6-symmetric"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "datasheets/BAV70S.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "100V 250mA high-speed switching diodes, dual common cathode, SOT-363"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?363*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "BAV70S_0_1"
-				(polyline
-					(pts
-						(xy -3.81 1.27) (xy -1.27 0) (xy -3.81 -1.27) (xy -3.81 1.27) (xy -3.81 1.27) (xy -3.81 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 0) (xy 3.81 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -1.27) (xy 1.27 0) (xy 3.81 1.27) (xy 3.81 -1.27) (xy 3.81 -1.27) (xy 3.81 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "BAV70S_1_1"
-				(pin passive line
-					(at -7.62 0 0)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "BAV70S_2_1"
-				(pin passive line
-					(at -7.62 0 0)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "000_LOCAL:C"
 			(pin_numbers
 				(hide yes)
@@ -2232,6 +1963,209 @@
 					(at 0 -2.54 90)
 					(length 2.032)
 					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "000_LOCAL:D_Dual_CommonAnode_KKA_Parallel"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Dual_CommonAnode_KKA_Parallel"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.27 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at -1.27 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Dual diode, common anode on pin 1"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Dual_CommonAnode_KKA_Parallel_0_0"
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -3.81) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Dual_CommonAnode_KKA_Parallel_0_1"
+				(circle
+					(center -1.27 0)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.81) (xy 2.54 2.54) (xy 0 1.27) (xy 0 3.81) (xy 0 3.81) (xy 0 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 2.54 -2.54) (xy 0 -3.81) (xy 0 -1.27) (xy 0 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy -1.27 2.54) (xy -1.27 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "K"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3153,275 +3087,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "BAV70S_1"
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0.635 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "BAV70S"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "000_LOCAL:TSSOP-6-symmetric"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "datasheets/BAV70S.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "100V 250mA high-speed switching diodes, dual common cathode, SOT-363"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?363*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "BAV70S_1_0_1"
-				(polyline
-					(pts
-						(xy -3.81 1.27) (xy -1.27 0) (xy -3.81 -1.27) (xy -3.81 1.27) (xy -3.81 1.27) (xy -3.81 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 0) (xy 3.81 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -1.27) (xy 1.27 0) (xy 3.81 1.27) (xy 3.81 -1.27) (xy 3.81 -1.27) (xy 3.81 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "BAV70S_1_1_1"
-				(pin passive line
-					(at -7.62 0 0)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "BAV70S_1_2_1"
-				(pin passive line
-					(at -7.62 0 0)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:VCC"
 			(power)
 			(pin_names
@@ -3556,17 +3221,6 @@
 		)
 		(uuid "145a30e9-46fb-4349-af14-09e5cae8aabd")
 	)
-	(text "BANK_1"
-		(exclude_from_sim no)
-		(at 66.04 156.21 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "163e29c2-47d6-49e1-82b0-4333a1b2954c")
-	)
 	(text "Compatible with 128Kx8 to 512Kx8 parts,\nthough only 128K is used. 5V. 8x14mm sTSOP-I-32\nSST39SF010A-55-4C-TU\nSST39SF010A-55-4I-TU\nSST39SF010A-70-4C-TU\nSST39SF010A-70-4I-TU\nSST39SF020A-xx-xx-TU\nSST39SF040-xx-xx-TU\nold parts:\nSST39SF0x0x-xx-xx-WHE\nGLS29EE0x0-xx-xx-WHE"
 		(exclude_from_sim no)
 		(at 129.54 50.546 0)
@@ -3577,6 +3231,28 @@
 			(justify left bottom)
 		)
 		(uuid "4224317d-654d-4246-98d3-577baebfab93")
+	)
+	(text "WHITE: CUS-14TB\nBLACK: MSS14-V-TR"
+		(exclude_from_sim no)
+		(at 54.61 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "67daab98-bb99-47c5-a351-74f063a642c0")
+	)
+	(text "BANK_3"
+		(exclude_from_sim no)
+		(at 68.58 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8fe46fd6-a88e-4561-8408-4a8014f10889")
 	)
 	(text "just for pcb routing"
 		(exclude_from_sim no)
@@ -3589,7 +3265,7 @@
 		)
 		(uuid "936ada21-bad6-406d-8316-9a8a82bdb3a4")
 	)
-	(text "contact vias to\nprogramming adapter"
+	(text "PTH contacts to\nprogramming adapter"
 		(exclude_from_sim no)
 		(at 200.66 59.69 0)
 		(effects
@@ -3599,6 +3275,17 @@
 			(justify left bottom)
 		)
 		(uuid "b0e20aff-6f7d-4984-90a0-843a64b33197")
+	)
+	(text "BANK_1"
+		(exclude_from_sim no)
+		(at 68.58 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed1a3f1b-4fae-4f92-a627-33c73e90104f")
 	)
 	(text "BANK SELECT"
 		(exclude_from_sim no)
@@ -3611,11 +3298,22 @@
 		)
 		(uuid "f0dfd032-56e4-406e-b244-1c06959b1ce4")
 	)
+	(text "BANK_2"
+		(exclude_from_sim no)
+		(at 68.58 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f4868867-729a-4648-9e5c-74e62db652d8")
+	)
 	(junction
-		(at 85.09 152.4)
+		(at 101.6 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0e07c841-767e-402b-9200-f1176e07a8ee")
+		(uuid "0cd93ff1-9814-413b-8829-214d755a2da4")
 	)
 	(junction
 		(at 152.4 119.38)
@@ -3624,22 +3322,10 @@
 		(uuid "139c7020-7270-47a6-8c04-dbaf401b4635")
 	)
 	(junction
-		(at 62.23 166.37)
+		(at 64.77 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2d336a26-406c-4c47-bdbe-f4086e7099fc")
-	)
-	(junction
-		(at 101.6 154.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "301234ed-5b52-4de5-a24c-d5d13fbd6a74")
-	)
-	(junction
-		(at 92.71 161.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "59f4fabf-aae0-4461-9e36-c3c58f0c6e2a")
 	)
 	(junction
 		(at 190.5 76.2)
@@ -3648,14 +3334,42 @@
 		(uuid "86ca78c3-f948-4cf6-9f89-9dec2dd8f679")
 	)
 	(junction
+		(at 88.9 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b52201be-fd84-469e-923e-a008ac769868")
+	)
+	(junction
+		(at 91.44 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb822b60-6f6a-442d-88d2-ee6d24d2c56a")
+	)
+	(junction
 		(at 137.16 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d8a6abf2-b4c4-4e28-a26a-78580de8221d")
 	)
+	(junction
+		(at 106.68 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e356c7c3-5fa3-4829-9e6c-de910d1f900e")
+	)
 	(no_connect
-		(at 66.04 156.21)
+		(at 68.58 149.86)
 		(uuid "e6533a7c-ee54-49c3-a68b-28b3c1122b47")
+	)
+	(wire
+		(pts
+			(xy 88.9 152.4) (xy 88.9 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d3de382-8d5d-472a-8b0f-ac6debecbd8b")
 	)
 	(wire
 		(pts
@@ -3669,13 +3383,13 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 163.83) (xy 109.22 163.83)
+			(xy 68.58 152.4) (xy 88.9 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4338967c-2c61-4a3f-a9c5-72b83aad6bd7")
+		(uuid "4371684b-5b71-4852-9d50-7dcf00c60041")
 	)
 	(polyline
 		(pts
@@ -3687,16 +3401,6 @@
 		)
 		(uuid "496de5d2-9065-49a3-aacb-2c2ff4dca3cc")
 	)
-	(wire
-		(pts
-			(xy 85.09 152.4) (xy 85.09 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ac0cb25-a591-474a-abe9-bb2551de002a")
-	)
 	(polyline
 		(pts
 			(xy 44.45 135.89) (xy 44.45 173.99)
@@ -3706,16 +3410,6 @@
 			(type default)
 		)
 		(uuid "5e0ad26f-3d38-4ef3-b1a0-f58926b44f16")
-	)
-	(wire
-		(pts
-			(xy 85.09 152.4) (xy 132.08 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6bf0ed67-cfd2-4584-862d-a66fc61908af")
 	)
 	(wire
 		(pts
@@ -3749,17 +3443,27 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 158.75) (xy 77.47 158.75)
+			(xy 88.9 152.4) (xy 101.6 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "889ef2b2-8ee6-4836-b9f2-2f3a470ff9ee")
+		(uuid "73c8770a-62ce-4339-9229-e0c65e5f4f9b")
 	)
 	(wire
 		(pts
-			(xy 59.69 166.37) (xy 62.23 166.37)
+			(xy 91.44 154.94) (xy 106.68 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93895daa-83bc-4d81-96a3-a2cc12818406")
+	)
+	(wire
+		(pts
+			(xy 62.23 160.02) (xy 64.77 160.02)
 		)
 		(stroke
 			(width 0)
@@ -3769,13 +3473,33 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 161.29) (xy 93.98 161.29)
+			(xy 101.6 152.4) (xy 132.08 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9f032388-d8e3-408f-9d55-4a9585852f31")
+		(uuid "99af8785-f826-499b-ae33-e314c6ee351b")
+	)
+	(wire
+		(pts
+			(xy 68.58 157.48) (xy 78.74 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9add9ef4-1950-4d7e-94d6-603523b8d15e")
+	)
+	(wire
+		(pts
+			(xy 68.58 154.94) (xy 91.44 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a782c5b3-8838-4eba-91b9-ba75be3fd241")
 	)
 	(wire
 		(pts
@@ -3786,16 +3510,6 @@
 			(type default)
 		)
 		(uuid "a9aaaaa8-b64a-41b1-9c63-3e5f3fa918dc")
-	)
-	(wire
-		(pts
-			(xy 92.71 158.75) (xy 92.71 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad2a9e43-63ed-4991-b4a1-d270cd08fd9f")
 	)
 	(wire
 		(pts
@@ -3819,23 +3533,23 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 154.94) (xy 129.54 154.94)
+			(xy 101.6 152.4) (xy 101.6 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c9daf128-60b9-48d6-a502-d76b9ac2f92d")
+		(uuid "c162e732-a322-42bb-aa24-67f51a4d5280")
 	)
 	(wire
 		(pts
-			(xy 109.22 163.83) (xy 109.22 161.29)
+			(xy 106.68 154.94) (xy 129.54 154.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cb4e234e-7885-4c0a-91cc-94f802cbc1fc")
+		(uuid "c9c6c5eb-f916-479a-906f-7e6222bffe04")
 	)
 	(polyline
 		(pts
@@ -3859,16 +3573,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 161.29) (xy 92.71 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d66a517a-1dfe-486c-a92c-a53b558e70ac")
-	)
-	(wire
-		(pts
 			(xy 137.16 111.76) (xy 137.16 114.3)
 		)
 		(stroke
@@ -3876,6 +3580,16 @@
 			(type default)
 		)
 		(uuid "d8248bd0-7a0c-4a2c-9bf4-1f72484cfde9")
+	)
+	(wire
+		(pts
+			(xy 78.74 157.48) (xy 78.74 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da56b355-3952-44e5-a435-e9c035edb007")
 	)
 	(polyline
 		(pts
@@ -3899,13 +3613,23 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 154.94) (xy 101.6 156.21)
+			(xy 88.9 162.56) (xy 91.44 162.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e7f4c772-d545-4486-b788-55d57202d883")
+		(uuid "e8503eb6-da7a-4f17-ba78-61065086e6ad")
+	)
+	(wire
+		(pts
+			(xy 106.68 154.94) (xy 106.68 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea808bb4-d16e-40ff-b333-eea78b914231")
 	)
 	(wire
 		(pts
@@ -3916,6 +3640,16 @@
 			(type default)
 		)
 		(uuid "ece08085-4a5d-4977-b971-e054fc3d102a")
+	)
+	(wire
+		(pts
+			(xy 91.44 154.94) (xy 91.44 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f75e7cb6-4c58-49c2-bab9-1047403a3587")
 	)
 	(label "A6"
 		(at 137.16 83.82 180)
@@ -3997,6 +3731,16 @@
 		)
 		(uuid "12b02812-0401-4101-a339-3b9142d9f56c")
 	)
+	(label "A15"
+		(at 101.6 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "136e347c-ee74-4305-95ff-f85595aa6799")
+	)
 	(label "A10"
 		(at 207.01 91.44 180)
 		(effects
@@ -4016,16 +3760,6 @@
 			(justify left bottom)
 		)
 		(uuid "13bc951f-cdab-492f-8968-0531456256f5")
-	)
-	(label "A16"
-		(at 101.6 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "14a0eec3-21de-42f7-8535-c0d990c17f29")
 	)
 	(label "A9"
 		(at 137.16 91.44 180)
@@ -4056,16 +3790,6 @@
 			(justify right bottom)
 		)
 		(uuid "17c9e5c9-6cc4-4d30-8a54-4edacf89fdc5")
-	)
-	(label "BANK_3"
-		(at 66.04 161.29 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "19ac8c1d-b9b0-43c3-8b50-5c8174511cc9")
 	)
 	(label "A12"
 		(at 137.16 99.06 180)
@@ -4116,16 +3840,6 @@
 			(justify right bottom)
 		)
 		(uuid "2c0bec2e-8ea9-432a-bafd-5b986b181a6f")
-	)
-	(label "BANK_4"
-		(at 66.04 163.83 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2c24931d-8b68-4c0e-bf24-72cf8bb05298")
 	)
 	(label "D5"
 		(at 167.64 81.28 0)
@@ -4587,15 +4301,15 @@
 		)
 		(uuid "b583a844-5d06-45c4-a137-5dfafab5cfb6")
 	)
-	(label "A15"
-		(at 85.09 152.4 0)
+	(label "A16"
+		(at 106.68 154.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "be6d6fb4-4eca-4868-8377-75b23f01eb74")
+		(uuid "bcbb8a0a-fdff-4587-ae03-0fcc4c45b32b")
 	)
 	(label "~{OE}"
 		(at 224.79 91.44 0)
@@ -4677,16 +4391,6 @@
 		)
 		(uuid "d42f8ec6-b3e6-4c58-acdd-7997559e2260")
 	)
-	(label "BANK_2"
-		(at 66.04 158.75 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d5afd50a-53c7-48c8-8c69-a82386184cf1")
-	)
 	(label "A5"
 		(at 224.79 83.82 0)
 		(effects
@@ -4746,6 +4450,16 @@
 			(justify left bottom)
 		)
 		(uuid "e76afbfb-5d5c-4b8d-8cea-127e8d10a195")
+	)
+	(label "BANK_4"
+		(at 68.58 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e9aff7f0-856c-4779-af38-dd1171226601")
 	)
 	(label "BANK_4"
 		(at 87.63 185.42 0)
@@ -5395,7 +5109,7 @@
 	)
 	(symbol
 		(lib_id "000_LOCAL:SW_1P4T_CUS-14B_-_PTH")
-		(at 60.96 160.02 0)
+		(at 63.5 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5403,7 +5117,7 @@
 		(dnp no)
 		(uuid "246ddb80-4475-4684-8185-1c4169c84e30")
 		(property "Reference" "SW1"
-			(at 62.23 153.67 0)
+			(at 64.77 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5411,7 +5125,7 @@
 			)
 		)
 		(property "Value" "CUS-14TB"
-			(at 64.77 151.13 0)
+			(at 67.31 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5419,7 +5133,7 @@
 			)
 		)
 		(property "Footprint" "000_LOCAL:SW_SP4T_CUS-14B - PTH"
-			(at 45.085 155.575 0)
+			(at 47.625 149.225 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5428,7 +5142,7 @@
 			)
 		)
 		(property "Datasheet" "datasheets/cus.pdf"
-			(at 60.96 160.02 0)
+			(at 63.5 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5437,7 +5151,7 @@
 			)
 		)
 		(property "Description" "CUS-14TB Switch, 4 position, single pole 4 throw, 4 position switch, SP4T"
-			(at 60.96 160.02 0)
+			(at 63.5 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5446,7 +5160,7 @@
 			)
 		)
 		(property "MPN" "CUS-14TB"
-			(at 60.96 160.02 0)
+			(at 63.5 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5494,43 +5208,33 @@
 		)
 	)
 	(symbol
-		(lib_name "BAV70S_1")
-		(lib_id "000_LOCAL:BAV70S")
-		(at 85.09 158.75 0)
+		(lib_id "000_LOCAL:D_Dual_CommonAnode_KKA_Parallel")
+		(at 83.82 160.02 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "351b161f-30a8-4d62-98e6-12b4914644d6")
+		(uuid "33253ff7-1829-403e-bca3-b68a7839a680")
 		(property "Reference" "D1"
-			(at 85.09 165.1 0)
+			(at 80.01 162.052 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "BAV70S"
-			(at 85.09 162.56 0)
+		(property "Value" "BAW56"
+			(at 80.264 164.338 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "000_LOCAL:TSSOP-6-symmetric"
-			(at 85.09 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "datasheets/BAV70S.pdf"
-			(at 85.09 158.75 0)
+		(property "Footprint" "000_LOCAL:SOT-23"
+			(at 82.55 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5538,8 +5242,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "BAV70S 100V 250mA high-speed switching diodes, dual common cathode, SOT-363"
-			(at 85.09 158.75 0)
+		(property "Datasheet" "datasheets/BAW56.PDF"
+			(at 82.55 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5547,8 +5251,17 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "BAV70S,115"
-			(at 85.09 158.75 0)
+		(property "Description" "Dual diode, common anode on pin 3"
+			(at 83.82 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TBAW56,LM"
+			(at 83.82 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5557,30 +5270,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "e512ec05-752d-4c95-aaa8-b5055e79947b")
-		)
-		(pin "2"
-			(uuid "46ffbe1b-a512-450f-ae09-5dc3a321de82")
-		)
-		(pin "4"
-			(uuid "576e1dfe-0f5a-4c9c-bdf7-65c0457c0bd9")
-		)
-		(pin "6"
-			(uuid "f4b52cc9-f1b9-403c-a749-c8e26f6130bf")
-		)
-		(pin "5"
-			(uuid "20a80881-e5b4-4fc3-b731-1afb077b3228")
+			(uuid "5c987b6b-696d-4634-9635-c3d443b487f8")
 		)
 		(pin "3"
-			(uuid "a9be5f3f-863e-435f-a798-38bae3c3eadf")
+			(uuid "0f9c8422-1d1e-4f76-a73c-41452246d5a4")
+		)
+		(pin "2"
+			(uuid "6f808bc0-26f7-4326-ab84-53ab810942d0")
 		)
 		(instances
-			(project "WP-2_IC-Card_MRAM_512"
-				(path "/61a4a6ea-f14c-4701-87bd-6399392c074d"
-					(reference "D1")
-					(unit 1)
-				)
-			)
 			(project "M4ROM_27256"
 				(path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
 					(reference "D1")
@@ -5663,102 +5361,8 @@
 		)
 	)
 	(symbol
-		(lib_id "000_LOCAL:BAV70S")
-		(at 101.6 161.29 180)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4a5ee70e-5e6e-4238-ba24-044656757944")
-		(property "Reference" "D1"
-			(at 101.6 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BAV70S"
-			(at 101.6 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "000_LOCAL:TSSOP-6-symmetric"
-			(at 101.6 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "datasheets/BAV70S.pdf"
-			(at 101.6 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "BAV70S 100V 250mA high-speed switching diodes, dual common cathode, SOT-363"
-			(at 101.6 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "BAV70S,115"
-			(at 101.6 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "da363403-f7b8-4909-8ad7-eeb56bafa7f6")
-		)
-		(pin "2"
-			(uuid "2d2a2755-6b06-4e7d-9666-11c835620792")
-		)
-		(pin "4"
-			(uuid "01ac86c5-ffce-4d73-95fb-55ce58695723")
-		)
-		(pin "6"
-			(uuid "279e871c-8cba-4dd0-a1b3-8567aeebca06")
-		)
-		(pin "5"
-			(uuid "ddba9520-5f03-4b19-ba1a-2e53a92c6f25")
-		)
-		(pin "3"
-			(uuid "bf7af89b-3823-41ac-b2bc-43f82137e955")
-		)
-		(instances
-			(project "WP-2_IC-Card_MRAM_512"
-				(path "/61a4a6ea-f14c-4701-87bd-6399392c074d"
-					(reference "D1")
-					(unit 2)
-				)
-			)
-			(project "M4ROM_27256"
-				(path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
-					(reference "D1")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VCC")
-		(at 55.88 156.21 0)
+		(at 58.42 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5766,7 +5370,7 @@
 		(dnp no)
 		(uuid "58b1fc14-c3b4-4f6d-998c-40b2b4c314f4")
 		(property "Reference" "#PWR01"
-			(at 55.88 160.02 0)
+			(at 58.42 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5775,7 +5379,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 55.88 152.4 0)
+			(at 58.42 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5783,7 +5387,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 55.88 156.21 0)
+			(at 58.42 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5792,7 +5396,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 55.88 156.21 0)
+			(at 58.42 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5801,7 +5405,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 55.88 156.21 0)
+			(at 58.42 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6033,6 +5637,73 @@
 			(project "M4ROM_27256"
 				(path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "000_LOCAL:GND")
+		(at 106.68 165.1 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ddf8c38-0242-489c-9ca1-a7d23f1b4fb9")
+		(property "Reference" "#PWR022"
+			(at 106.68 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 110.49 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 106.68 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "77bdaae4-e51d-47d3-b06a-71aedc902038")
+		)
+		(instances
+			(project "M4ROM_27256"
+				(path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -6339,17 +6010,17 @@
 		)
 	)
 	(symbol
-		(lib_id "0_LOCAL:GND")
-		(at 93.98 154.94 0)
+		(lib_id "000_LOCAL:GND")
+		(at 101.6 165.1 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "cca53bd3-fbd5-4457-a0ef-ff8825c1ceff")
-		(property "Reference" "#PWR04"
-			(at 93.98 158.75 0)
+		(uuid "cdd4071a-5c76-4329-8a93-7b5b2ab1775a")
+		(property "Reference" "#PWR021"
+			(at 101.6 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6358,7 +6029,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 97.79 156.21 0)
+			(at 97.79 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6367,7 +6038,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 154.94 0)
+			(at 101.6 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6376,7 +6047,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 154.94 0)
+			(at 101.6 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6385,7 +6056,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 93.98 154.94 0)
+			(at 101.6 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6394,18 +6065,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ed5bd4f7-bfbf-4595-bf1b-4de6caeb5e12")
+			(uuid "23857520-8d87-4ba1-9f97-8b7e80ee0636")
 		)
 		(instances
-			(project "WP-2_IC-Card_MRAM_512"
-				(path "/61a4a6ea-f14c-4701-87bd-6399392c074d"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
 			(project "M4ROM_27256"
 				(path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
-					(reference "#PWR04")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -6558,80 +6223,7 @@
 	)
 	(symbol
 		(lib_id "0_LOCAL:GND")
-		(at 77.47 152.4 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "db74f496-8bbe-40c2-b1ba-e4eaf4435c1b")
-		(property "Reference" "#PWR03"
-			(at 77.47 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 73.66 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 77.47 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 77.47 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 77.47 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "73fc6475-008f-4913-a673-360230521762")
-		)
-		(instances
-			(project "WP-2_IC-Card_MRAM_512"
-				(path "/61a4a6ea-f14c-4701-87bd-6399392c074d"
-					(reference "#PWR021")
-					(unit 1)
-				)
-			)
-			(project "M4ROM_27256"
-				(path "/c6d91437-1142-48a2-b1d0-d6e4e1e576c8"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "0_LOCAL:GND")
-		(at 62.23 166.37 0)
+		(at 64.77 160.02 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6640,7 +6232,7 @@
 		(dnp no)
 		(uuid "dd49cdc6-a5ba-45d9-b045-ff26d20a8730")
 		(property "Reference" "#PWR02"
-			(at 62.23 170.18 0)
+			(at 64.77 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6649,7 +6241,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 62.23 170.18 0)
+			(at 64.77 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6658,7 +6250,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 166.37 0)
+			(at 64.77 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6667,7 +6259,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 166.37 0)
+			(at 64.77 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6676,7 +6268,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 62.23 166.37 0)
+			(at 64.77 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6704,8 +6296,8 @@
 	)
 	(symbol
 		(lib_id "000_LOCAL:R_Array_04")
-		(at 81.28 152.4 270)
-		(mirror x)
+		(at 101.6 161.29 0)
+		(mirror y)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6713,7 +6305,7 @@
 		(dnp no)
 		(uuid "df4c7743-d913-400f-a4f8-72eb38d9d23b")
 		(property "Reference" "RA1"
-			(at 78.74 149.86 90)
+			(at 99.822 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6722,7 +6314,7 @@
 			)
 		)
 		(property "Value" "200k"
-			(at 78.74 147.32 90)
+			(at 99.568 160.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6731,7 +6323,7 @@
 			)
 		)
 		(property "Footprint" "000_LOCAL:R_Array_Convex_4x0612"
-			(at 81.28 152.4 90)
+			(at 101.6 161.29 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6740,7 +6332,7 @@
 			)
 		)
 		(property "Datasheet" "datasheets/YC164.pdf"
-			(at 81.28 152.4 90)
+			(at 101.6 161.29 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6749,7 +6341,7 @@
 			)
 		)
 		(property "Description" "RES ARRAY 4 x 200K isolated 1206 4x0612 convex"
-			(at 81.28 152.4 0)
+			(at 101.6 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6758,7 +6350,7 @@
 			)
 		)
 		(property "MPN" "YC164-JR-07200KL"
-			(at 81.28 152.4 0)
+			(at 101.6 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6801,8 +6393,8 @@
 	)
 	(symbol
 		(lib_id "000_LOCAL:R_Array_04")
-		(at 97.79 154.94 270)
-		(mirror x)
+		(at 106.68 161.29 0)
+		(mirror y)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6810,25 +6402,25 @@
 		(dnp no)
 		(uuid "e850810c-baa2-4c26-b144-c036f8423503")
 		(property "Reference" "RA1"
-			(at 95.25 151.13 90)
+			(at 108.458 162.306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "200k"
-			(at 95.25 148.59 90)
+			(at 108.458 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "000_LOCAL:R_Array_Convex_4x0612"
-			(at 97.79 154.94 90)
+			(at 106.68 161.29 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6837,7 +6429,7 @@
 			)
 		)
 		(property "Datasheet" "datasheets/YC164.pdf"
-			(at 97.79 154.94 90)
+			(at 106.68 161.29 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6846,7 +6438,7 @@
 			)
 		)
 		(property "Description" "RES ARRAY 4 x 200K isolated 1206 4x0612 convex"
-			(at 97.79 154.94 0)
+			(at 106.68 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6855,7 +6447,7 @@
 			)
 		)
 		(property "MPN" "YC164-JR-07200KL"
-			(at 97.79 154.94 0)
+			(at 106.68 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
